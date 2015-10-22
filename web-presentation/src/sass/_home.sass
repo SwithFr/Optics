@@ -1,0 +1,53 @@
+main
+    width: 100%
+    height: 100%
+    position: relative
+
+    background: url(../img/home-background.jpg) center fixed
+    background-size: cover
+
+    &::after
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: ''
+        background-color: rgba( 33, 36, 45, .9 )
+
+.wrapper
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 100
+
+.logo
+    min-width: 200px
+    width: 20%
+
+.main-title
+    margin: .5em 0
+
+    color: $green
+    letter-spacing: 10px
+
+.main-description, .main-info
+    color: $white
+
+.main-info
+    margin-top: 2em
+    text-transform: uppercase
+
+    font-family: "montserratlight"
+
+.author
+    position: fixed
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1000
+
+    color: $green
+    font-family: 'montserratlight'
+    font-size: .9em
