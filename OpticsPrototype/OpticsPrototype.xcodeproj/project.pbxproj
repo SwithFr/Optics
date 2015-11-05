@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092238F61BEA49D100C87ADF /* AppDelegate.swift */; };
+		092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 092238FD1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld */; };
+		092239011BEA49D100C87ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 092239001BEA49D100C87ADF /* Assets.xcassets */; };
+		092239041BEA49D100C87ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092239021BEA49D100C87ADF /* LaunchScreen.storyboard */; };
+		0922390F1BEA49D100C87ADF /* OpticsPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922390E1BEA49D100C87ADF /* OpticsPrototypeTests.swift */; };
+		0922391A1BEA49D100C87ADF /* OpticsPrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092239191BEA49D100C87ADF /* OpticsPrototypeUITests.swift */; };
+		092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */; };
+		0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */; };
+		0922392E1BEA72C200C87ADF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922392D1BEA72C200C87ADF /* MainViewController.swift */; };
+		092239321BEA950400C87ADF /* second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092239311BEA950400C87ADF /* second.storyboard */; };
+		099873251BEB6D3700A6F8BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873241BEB6D3700A6F8BD /* LoginViewController.swift */; };
+		099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873261BEB6D6700A6F8BD /* RegisterViewController.swift */; };
+		099873291BEB746000A6F8BD /* FolderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */; };
+		0998732B1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */; };
+		099873341BEB834400A6F8BD /* Ben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099873321BEB834400A6F8BD /* Ben.jpg */; };
+		099873351BEB834400A6F8BD /* Marion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099873331BEB834400A6F8BD /* Marion.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0922390B1BEA49D100C87ADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 092238EB1BEA49D100C87ADF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092238F21BEA49D100C87ADF;
+			remoteInfo = OpticsPrototype;
+		};
+		092239161BEA49D100C87ADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 092238EB1BEA49D100C87ADF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 092238F21BEA49D100C87ADF;
+			remoteInfo = OpticsPrototype;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		092238F31BEA49D100C87ADF /* OpticsPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpticsPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		092238F61BEA49D100C87ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		092238FE1BEA49D100C87ADF /* OpticsPrototype.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpticsPrototype.xcdatamodel; sourceTree = "<group>"; };
+		092239001BEA49D100C87ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		092239031BEA49D100C87ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		092239051BEA49D100C87ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0922390A1BEA49D100C87ADF /* OpticsPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpticsPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0922390E1BEA49D100C87ADF /* OpticsPrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticsPrototypeTests.swift; sourceTree = "<group>"; };
+		092239101BEA49D100C87ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		092239151BEA49D100C87ADF /* OpticsPrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpticsPrototypeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		092239191BEA49D100C87ADF /* OpticsPrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpticsPrototypeUITests.swift; sourceTree = "<group>"; };
+		0922391B1BEA49D100C87ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldersTableViewController.swift; sourceTree = "<group>"; };
+		092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
+		0922392D1BEA72C200C87ADF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		092239311BEA950400C87ADF /* second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = second.storyboard; sourceTree = "<group>"; };
+		099873241BEB6D3700A6F8BD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		099873261BEB6D6700A6F8BD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderDetailTableViewController.swift; sourceTree = "<group>"; };
+		0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		099873321BEB834400A6F8BD /* Ben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ben.jpg; sourceTree = "<group>"; };
+		099873331BEB834400A6F8BD /* Marion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marion.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		092238F01BEA49D100C87ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239071BEA49D100C87ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239121BEA49D100C87ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		092238EA1BEA49D100C87ADF = {
+			isa = PBXGroup;
+			children = (
+				092238F51BEA49D100C87ADF /* OpticsPrototype */,
+				0922390D1BEA49D100C87ADF /* OpticsPrototypeTests */,
+				092239181BEA49D100C87ADF /* OpticsPrototypeUITests */,
+				092238F41BEA49D100C87ADF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		092238F41BEA49D100C87ADF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				092238F31BEA49D100C87ADF /* OpticsPrototype.app */,
+				0922390A1BEA49D100C87ADF /* OpticsPrototypeTests.xctest */,
+				092239151BEA49D100C87ADF /* OpticsPrototypeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		092238F51BEA49D100C87ADF /* OpticsPrototype */ = {
+			isa = PBXGroup;
+			children = (
+				092238F61BEA49D100C87ADF /* AppDelegate.swift */,
+				092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */,
+				099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */,
+				0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */,
+				092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */,
+				092239311BEA950400C87ADF /* second.storyboard */,
+				099873261BEB6D6700A6F8BD /* RegisterViewController.swift */,
+				099873241BEB6D3700A6F8BD /* LoginViewController.swift */,
+				0922392D1BEA72C200C87ADF /* MainViewController.swift */,
+				092239001BEA49D100C87ADF /* Assets.xcassets */,
+				092239021BEA49D100C87ADF /* LaunchScreen.storyboard */,
+				092239051BEA49D100C87ADF /* Info.plist */,
+				099873311BEB834400A6F8BD /* img */,
+				092238FD1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld */,
+			);
+			path = OpticsPrototype;
+			sourceTree = "<group>";
+		};
+		0922390D1BEA49D100C87ADF /* OpticsPrototypeTests */ = {
+			isa = PBXGroup;
+			children = (
+				0922390E1BEA49D100C87ADF /* OpticsPrototypeTests.swift */,
+				092239101BEA49D100C87ADF /* Info.plist */,
+			);
+			path = OpticsPrototypeTests;
+			sourceTree = "<group>";
+		};
+		092239181BEA49D100C87ADF /* OpticsPrototypeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				092239191BEA49D100C87ADF /* OpticsPrototypeUITests.swift */,
+				0922391B1BEA49D100C87ADF /* Info.plist */,
+			);
+			path = OpticsPrototypeUITests;
+			sourceTree = "<group>";
+		};
+		099873311BEB834400A6F8BD /* img */ = {
+			isa = PBXGroup;
+			children = (
+				099873321BEB834400A6F8BD /* Ben.jpg */,
+				099873331BEB834400A6F8BD /* Marion.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		092238F21BEA49D100C87ADF /* OpticsPrototype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0922391E1BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototype" */;
+			buildPhases = (
+				092238EF1BEA49D100C87ADF /* Sources */,
+				092238F01BEA49D100C87ADF /* Frameworks */,
+				092238F11BEA49D100C87ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpticsPrototype;
+			productName = OpticsPrototype;
+			productReference = 092238F31BEA49D100C87ADF /* OpticsPrototype.app */;
+			productType = "com.apple.product-type.application";
+		};
+		092239091BEA49D100C87ADF /* OpticsPrototypeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 092239211BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototypeTests" */;
+			buildPhases = (
+				092239061BEA49D100C87ADF /* Sources */,
+				092239071BEA49D100C87ADF /* Frameworks */,
+				092239081BEA49D100C87ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0922390C1BEA49D100C87ADF /* PBXTargetDependency */,
+			);
+			name = OpticsPrototypeTests;
+			productName = OpticsPrototypeTests;
+			productReference = 0922390A1BEA49D100C87ADF /* OpticsPrototypeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		092239141BEA49D100C87ADF /* OpticsPrototypeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 092239241BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototypeUITests" */;
+			buildPhases = (
+				092239111BEA49D100C87ADF /* Sources */,
+				092239121BEA49D100C87ADF /* Frameworks */,
+				092239131BEA49D100C87ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				092239171BEA49D100C87ADF /* PBXTargetDependency */,
+			);
+			name = OpticsPrototypeUITests;
+			productName = OpticsPrototypeUITests;
+			productReference = 092239151BEA49D100C87ADF /* OpticsPrototypeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		092238EB1BEA49D100C87ADF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Jérémy Smith";
+				TargetAttributes = {
+					092238F21BEA49D100C87ADF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 32XCWCN8AR;
+					};
+					092239091BEA49D100C87ADF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 32XCWCN8AR;
+						TestTargetID = 092238F21BEA49D100C87ADF;
+					};
+					092239141BEA49D100C87ADF = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 32XCWCN8AR;
+						TestTargetID = 092238F21BEA49D100C87ADF;
+					};
+				};
+			};
+			buildConfigurationList = 092238EE1BEA49D100C87ADF /* Build configuration list for PBXProject "OpticsPrototype" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 092238EA1BEA49D100C87ADF;
+			productRefGroup = 092238F41BEA49D100C87ADF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				092238F21BEA49D100C87ADF /* OpticsPrototype */,
+				092239091BEA49D100C87ADF /* OpticsPrototypeTests */,
+				092239141BEA49D100C87ADF /* OpticsPrototypeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		092238F11BEA49D100C87ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092239321BEA950400C87ADF /* second.storyboard in Resources */,
+				092239041BEA49D100C87ADF /* LaunchScreen.storyboard in Resources */,
+				092239011BEA49D100C87ADF /* Assets.xcassets in Resources */,
+				099873341BEB834400A6F8BD /* Ben.jpg in Resources */,
+				099873351BEB834400A6F8BD /* Marion.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239081BEA49D100C87ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239131BEA49D100C87ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		092238EF1BEA49D100C87ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099873251BEB6D3700A6F8BD /* LoginViewController.swift in Sources */,
+				092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */,
+				099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */,
+				092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */,
+				092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */,
+				0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */,
+				099873291BEB746000A6F8BD /* FolderDetailTableViewController.swift in Sources */,
+				0922392E1BEA72C200C87ADF /* MainViewController.swift in Sources */,
+				0998732B1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239061BEA49D100C87ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922390F1BEA49D100C87ADF /* OpticsPrototypeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092239111BEA49D100C87ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922391A1BEA49D100C87ADF /* OpticsPrototypeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0922390C1BEA49D100C87ADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 092238F21BEA49D100C87ADF /* OpticsPrototype */;
+			targetProxy = 0922390B1BEA49D100C87ADF /* PBXContainerItemProxy */;
+		};
+		092239171BEA49D100C87ADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 092238F21BEA49D100C87ADF /* OpticsPrototype */;
+			targetProxy = 092239161BEA49D100C87ADF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		092239021BEA49D100C87ADF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				092239031BEA49D100C87ADF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0922391C1BEA49D100C87ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0922391D1BEA49D100C87ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0922391F1BEA49D100C87ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OpticsPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		092239201BEA49D100C87ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OpticsPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		092239221BEA49D100C87ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OpticsPrototypeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototypeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpticsPrototype.app/OpticsPrototype";
+			};
+			name = Debug;
+		};
+		092239231BEA49D100C87ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OpticsPrototypeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototypeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpticsPrototype.app/OpticsPrototype";
+			};
+			name = Release;
+		};
+		092239251BEA49D100C87ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OpticsPrototypeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototypeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OpticsPrototype;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		092239261BEA49D100C87ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OpticsPrototypeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototypeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OpticsPrototype;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		092238EE1BEA49D100C87ADF /* Build configuration list for PBXProject "OpticsPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0922391C1BEA49D100C87ADF /* Debug */,
+				0922391D1BEA49D100C87ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0922391E1BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0922391F1BEA49D100C87ADF /* Debug */,
+				092239201BEA49D100C87ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		092239211BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototypeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092239221BEA49D100C87ADF /* Debug */,
+				092239231BEA49D100C87ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		092239241BEA49D100C87ADF /* Build configuration list for PBXNativeTarget "OpticsPrototypeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092239251BEA49D100C87ADF /* Debug */,
+				092239261BEA49D100C87ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		092238FD1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				092238FE1BEA49D100C87ADF /* OpticsPrototype.xcdatamodel */,
+			);
+			currentVersion = 092238FE1BEA49D100C87ADF /* OpticsPrototype.xcdatamodel */;
+			path = OpticsPrototype.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 092238EB1BEA49D100C87ADF /* Project object */;
+}
