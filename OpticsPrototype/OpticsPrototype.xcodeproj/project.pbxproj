@@ -23,6 +23,10 @@
 		0998732B1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */; };
 		099873341BEB834400A6F8BD /* Ben.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099873321BEB834400A6F8BD /* Ben.jpg */; };
 		099873351BEB834400A6F8BD /* Marion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 099873331BEB834400A6F8BD /* Marion.jpg */; };
+		0998733B1BEB8EE400A6F8BD /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998733A1BEB8EE400A6F8BD /* PictureDetailViewController.swift */; };
+		0998733F1BEB928000A6F8BD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */; };
+		0998734D1BEBB01400A6F8BD /* moi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734C1BEBB01400A6F8BD /* moi.png */; };
+		0998734F1BEBB5AD00A6F8BD /* fake.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734E1BEBB5AD00A6F8BD /* fake.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderDetailTableViewCell.swift; sourceTree = "<group>"; };
 		099873321BEB834400A6F8BD /* Ben.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ben.jpg; sourceTree = "<group>"; };
 		099873331BEB834400A6F8BD /* Marion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Marion.jpg; sourceTree = "<group>"; };
+		0998733A1BEB8EE400A6F8BD /* PictureDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
+		0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		0998734C1BEBB01400A6F8BD /* moi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moi.png; sourceTree = "<group>"; };
+		0998734E1BEBB5AD00A6F8BD /* fake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,15 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				092238F61BEA49D100C87ADF /* AppDelegate.swift */,
-				092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */,
-				099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */,
-				0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */,
-				092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */,
-				092239311BEA950400C87ADF /* second.storyboard */,
-				099873261BEB6D6700A6F8BD /* RegisterViewController.swift */,
-				099873241BEB6D3700A6F8BD /* LoginViewController.swift */,
 				0922392D1BEA72C200C87ADF /* MainViewController.swift */,
+				099873461BEBA50B00A6F8BD /* Folders */,
+				099873471BEBA52000A6F8BD /* Comments */,
+				099873491BEBA56F00A6F8BD /* Images */,
+				099873481BEBA52800A6F8BD /* Users */,
 				092239001BEA49D100C87ADF /* Assets.xcassets */,
+				092239311BEA950400C87ADF /* second.storyboard */,
 				092239021BEA49D100C87ADF /* LaunchScreen.storyboard */,
 				092239051BEA49D100C87ADF /* Info.plist */,
 				099873311BEB834400A6F8BD /* img */,
@@ -154,10 +160,48 @@
 		099873311BEB834400A6F8BD /* img */ = {
 			isa = PBXGroup;
 			children = (
+				0998734E1BEBB5AD00A6F8BD /* fake.png */,
+				0998734C1BEBB01400A6F8BD /* moi.png */,
 				099873321BEB834400A6F8BD /* Ben.jpg */,
 				099873331BEB834400A6F8BD /* Marion.jpg */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		099873461BEBA50B00A6F8BD /* Folders */ = {
+			isa = PBXGroup;
+			children = (
+				092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */,
+				099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */,
+				0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */,
+				092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */,
+			);
+			name = Folders;
+			sourceTree = "<group>";
+		};
+		099873471BEBA52000A6F8BD /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
+		099873481BEBA52800A6F8BD /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				099873261BEB6D6700A6F8BD /* RegisterViewController.swift */,
+				099873241BEB6D3700A6F8BD /* LoginViewController.swift */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		099873491BEBA56F00A6F8BD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0998733A1BEB8EE400A6F8BD /* PictureDetailViewController.swift */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +314,9 @@
 				092239321BEA950400C87ADF /* second.storyboard in Resources */,
 				092239041BEA49D100C87ADF /* LaunchScreen.storyboard in Resources */,
 				092239011BEA49D100C87ADF /* Assets.xcassets in Resources */,
+				0998734D1BEBB01400A6F8BD /* moi.png in Resources */,
 				099873341BEB834400A6F8BD /* Ben.jpg in Resources */,
+				0998734F1BEBB5AD00A6F8BD /* fake.png in Resources */,
 				099873351BEB834400A6F8BD /* Marion.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +348,8 @@
 				092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */,
 				092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */,
 				0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */,
+				0998733B1BEB8EE400A6F8BD /* PictureDetailViewController.swift in Sources */,
+				0998733F1BEB928000A6F8BD /* CommentTableViewCell.swift in Sources */,
 				099873291BEB746000A6F8BD /* FolderDetailTableViewController.swift in Sources */,
 				0922392E1BEA72C200C87ADF /* MainViewController.swift in Sources */,
 				0998732B1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift in Sources */,
