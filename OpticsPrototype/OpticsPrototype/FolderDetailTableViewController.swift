@@ -42,5 +42,14 @@ class FolderDetailTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "pictureDetailSegue" {
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let detailViewController = segue.destinationViewController as! PictureDetailViewController
+            detailViewController.currentPicture = pictures[indexPath.row]
+        }
+    }
+
 
 }
