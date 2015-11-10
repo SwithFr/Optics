@@ -10,7 +10,7 @@ import UIKit
 
 class FoldersTableViewController: UITableViewController {
     
-    var user = ""
+    var user = "logged"
     
     var folders = [
         [ "name": "Mon anniv", "date": "17/03/2015", "participants": 18, "pictures": 33 ],
@@ -18,12 +18,15 @@ class FoldersTableViewController: UITableViewController {
         [ "name": "Nam party", "date": "07/07/2015", "participants": 13, "pictures": 8 ]
     ]
     
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
     override func viewDidAppear(animated: Bool) {
-        if user == "test" {
-            performSegueWithIdentifier("loginSegue", sender: self)
-        }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }
-
+    
+    func popToRoot(sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return folders.count
