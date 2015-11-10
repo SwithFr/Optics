@@ -11,12 +11,12 @@ import UIKit
 class MainViewController: UINavigationController {
 
     override func viewDidAppear(animated: Bool) {
-        let user = ""
+        let user = "logged"
             
-        if user == "test" {
-            performSegueWithIdentifier("loginSegue", sender: self)
-        } else {
-            performSegueWithIdentifier("foldersListSegue", sender: self)
+        if user == "" {
+            print("notLogged")
+            let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginScreen")
+            pushViewController(loginVC!, animated: true)
         }
     }
 
