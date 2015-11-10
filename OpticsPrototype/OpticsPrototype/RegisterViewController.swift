@@ -10,10 +10,17 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmField: UITextField!
+    @IBOutlet weak var registerBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        formatInput(loginField)
+        formatInput(passwordField)
+        formatInput(confirmField)
+        formatBtn(registerBtn)
     }
 
     override func didReceiveMemoryWarning() {
