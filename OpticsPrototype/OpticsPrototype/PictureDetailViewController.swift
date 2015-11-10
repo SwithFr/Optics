@@ -11,6 +11,7 @@ import UIKit
 class PictureDetailViewController: UIViewController, UITableViewDataSource {
     
     var currentPicture: NSDictionary = [String: String]()
+    let BorderColor = UIColor(red:0.10, green:0.12, blue:0.16, alpha:1.0)
     
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var author: UILabel!
@@ -21,15 +22,15 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         picture.image = UIImage(named: currentPicture["picture"] as! String)
         author.text = currentPicture["author"] as? String
         time.text = currentPicture["time"] as? String
         commentsCount.text = String(currentPicture["comments"]!)
-        authorPictureAvatar.layer.cornerRadius = CGFloat(20)
-        authorPictureAvatar.layer.borderWidth = 1.5
-        authorPictureAvatar.layer.borderColor = UIColor(red:0.10, green:0.12, blue:0.16, alpha:1.0).CGColor
-        authorPictureAvatar.clipsToBounds = true
+        formatRoundedImage(authorPictureAvatar, radius: 20, color: BorderColor, border: 1.5)
         authorPictureAvatar.image = UIImage(named: "moi.png")
+        
+        self.navigationItem.title = currentPicture["picture"] as? String
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,10 +55,7 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
         
         cell.author.text = comment["author"]! as String
         cell.comment.text = comment["comment"]! as String
-        cell.authorAvatar.layer.cornerRadius = CGFloat(20)
-        cell.authorAvatar.layer.borderWidth = 1.5
-        cell.authorAvatar.layer.borderColor = UIColor(red:0.10, green:0.12, blue:0.16, alpha:1.0).CGColor
-        cell.authorAvatar.clipsToBounds = true
+        formatRoundedImage(cell.authorAvatar, radius: 20, color: BorderColor, border: 1.5)
         cell.authorAvatar.image = UIImage(named: comment["authorAvatar"]! as String)
         
         return cell
