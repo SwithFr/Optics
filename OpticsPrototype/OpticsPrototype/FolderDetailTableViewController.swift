@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FolderDetailTableViewController: UITableViewController {
+class FolderDetailTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var currentFolder: NSDictionary = [String: String]()
     var pictures = [
@@ -17,11 +17,25 @@ class FolderDetailTableViewController: UITableViewController {
         [ "author": "Camille Caramel", "time": "2h", "comments": 13, "picture": "Ben.jpg" ]
     ]
 
-
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = currentFolder["name"] as? String
+        self.navigationController?.setNavigationBarHidden(false, animated:true)
+        let backImg = UIImage(named: "back-icon")
+        let backBtn = UIButton(type: .Custom)
+        backBtn.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
+        backBtn.setImage(backImg, forState: .Normal)
+        backBtn.sizeToFit()
+        let backBtnItem = UIBarButtonItem(customView: backBtn)
+        self.navigationItem.setLeftBarButtonItems([backBtnItem, menuBtn], animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+    }
+    
+    func popToRoot(sender: UIBarButtonItem) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,8 +53,21 @@ class FolderDetailTableViewController: UITableViewController {
         cell.commentsCount.text = String(picture["comments"]!)
         cell.picture.image = UIImage(named: picture["picture"] as! String)
 
-
         return cell
+    }
+    
+    @IBAction func addPictureBtnDidTouch(sender: AnyObject) {
+        var imageFromSource = UIImagePickerController()
+        imageFromSource.delegate = self
+        imageFromSource.allowsEditing = false
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            imageFromSource.sourceType = UIImagePickerControllerSourceType.Camera
+        } else {
+            imageFromSource.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }
+        
+        self.presentViewController(imageFromSource, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -49,6 +76,10 @@ class FolderDetailTableViewController: UITableViewController {
             let detailViewController = segue.destinationViewController as! PictureDetailViewController
             detailViewController.currentPicture = pictures[indexPath.row]
         }
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print("cool")
     }
 
 
