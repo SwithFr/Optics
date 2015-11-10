@@ -16,7 +16,13 @@
 		092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */; };
 		0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */; };
 		0922392E1BEA72C200C87ADF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922392D1BEA72C200C87ADF /* MainViewController.swift */; };
-		092239321BEA950400C87ADF /* second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092239311BEA950400C87ADF /* second.storyboard */; };
+		092239321BEA950400C87ADF /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092239311BEA950400C87ADF /* main.storyboard */; };
+		098C487D1BF22E90009C41D8 /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C487C1BF22E90009C41D8 /* tools.swift */; };
+		098C487F1BF23357009C41D8 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C487E1BF23357009C41D8 /* AddCommentViewController.swift */; };
+		098EEB011BECBAA6004C26F7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EEB001BECBAA6004C26F7 /* MenuViewController.swift */; };
+		098EEB031BECBB40004C26F7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EEB021BECBB40004C26F7 /* AccountViewController.swift */; };
+		098EEB051BECDE6F004C26F7 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EEB041BECDE6F004C26F7 /* FriendTableViewCell.swift */; };
+		098EEB071BECDF04004C26F7 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EEB061BECDF04004C26F7 /* FriendsTableViewController.swift */; };
 		099873251BEB6D3700A6F8BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873241BEB6D3700A6F8BD /* LoginViewController.swift */; };
 		099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873261BEB6D6700A6F8BD /* RegisterViewController.swift */; };
 		099873291BEB746000A6F8BD /* FolderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */; };
@@ -62,7 +68,13 @@
 		092239271BEA4F9B00C87ADF /* FoldersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldersTableViewController.swift; sourceTree = "<group>"; };
 		092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
 		0922392D1BEA72C200C87ADF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		092239311BEA950400C87ADF /* second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = second.storyboard; sourceTree = "<group>"; };
+		092239311BEA950400C87ADF /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		098C487C1BF22E90009C41D8 /* tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
+		098C487E1BF23357009C41D8 /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		098EEB001BECBAA6004C26F7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		098EEB021BECBB40004C26F7 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		098EEB041BECDE6F004C26F7 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		098EEB061BECDF04004C26F7 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		099873241BEB6D3700A6F8BD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		099873261BEB6D6700A6F8BD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		099873281BEB746000A6F8BD /* FolderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -125,12 +137,15 @@
 			children = (
 				092238F61BEA49D100C87ADF /* AppDelegate.swift */,
 				0922392D1BEA72C200C87ADF /* MainViewController.swift */,
+				098EEB001BECBAA6004C26F7 /* MenuViewController.swift */,
+				098C487C1BF22E90009C41D8 /* tools.swift */,
 				099873461BEBA50B00A6F8BD /* Folders */,
 				099873471BEBA52000A6F8BD /* Comments */,
 				099873491BEBA56F00A6F8BD /* Images */,
 				099873481BEBA52800A6F8BD /* Users */,
+				098EEB081BECE038004C26F7 /* Friends */,
 				092239001BEA49D100C87ADF /* Assets.xcassets */,
-				092239311BEA950400C87ADF /* second.storyboard */,
+				092239311BEA950400C87ADF /* main.storyboard */,
 				092239021BEA49D100C87ADF /* LaunchScreen.storyboard */,
 				092239051BEA49D100C87ADF /* Info.plist */,
 				099873311BEB834400A6F8BD /* img */,
@@ -155,6 +170,15 @@
 				0922391B1BEA49D100C87ADF /* Info.plist */,
 			);
 			path = OpticsPrototypeUITests;
+			sourceTree = "<group>";
+		};
+		098EEB081BECE038004C26F7 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				098EEB061BECDF04004C26F7 /* FriendsTableViewController.swift */,
+				098EEB041BECDE6F004C26F7 /* FriendTableViewCell.swift */,
+			);
+			name = Friends;
 			sourceTree = "<group>";
 		};
 		099873311BEB834400A6F8BD /* img */ = {
@@ -183,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */,
+				098C487E1BF23357009C41D8 /* AddCommentViewController.swift */,
 			);
 			name = Comments;
 			sourceTree = "<group>";
@@ -192,6 +217,7 @@
 			children = (
 				099873261BEB6D6700A6F8BD /* RegisterViewController.swift */,
 				099873241BEB6D3700A6F8BD /* LoginViewController.swift */,
+				098EEB021BECBB40004C26F7 /* AccountViewController.swift */,
 			);
 			name = Users;
 			sourceTree = "<group>";
@@ -311,7 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				092239321BEA950400C87ADF /* second.storyboard in Resources */,
+				092239321BEA950400C87ADF /* main.storyboard in Resources */,
 				092239041BEA49D100C87ADF /* LaunchScreen.storyboard in Resources */,
 				092239011BEA49D100C87ADF /* Assets.xcassets in Resources */,
 				0998734D1BEBB01400A6F8BD /* moi.png in Resources */,
@@ -342,17 +368,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098C487F1BF23357009C41D8 /* AddCommentViewController.swift in Sources */,
 				099873251BEB6D3700A6F8BD /* LoginViewController.swift in Sources */,
 				092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */,
+				098EEB031BECBB40004C26F7 /* AccountViewController.swift in Sources */,
 				099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */,
 				092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */,
 				092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */,
 				0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */,
 				0998733B1BEB8EE400A6F8BD /* PictureDetailViewController.swift in Sources */,
+				098EEB011BECBAA6004C26F7 /* MenuViewController.swift in Sources */,
 				0998733F1BEB928000A6F8BD /* CommentTableViewCell.swift in Sources */,
 				099873291BEB746000A6F8BD /* FolderDetailTableViewController.swift in Sources */,
+				098C487D1BF22E90009C41D8 /* tools.swift in Sources */,
 				0922392E1BEA72C200C87ADF /* MainViewController.swift in Sources */,
 				0998732B1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift in Sources */,
+				098EEB051BECDE6F004C26F7 /* FriendTableViewCell.swift in Sources */,
+				098EEB071BECDF04004C26F7 /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OpticsPrototype/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OpticsPrototype/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swith.OpticsPrototype;
 				PRODUCT_NAME = "$(TARGET_NAME)";
