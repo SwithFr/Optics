@@ -10,15 +10,21 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        formatInput(loginField)
+        formatInput(passwordField)
+        formatBtn(loginBtn)
+        self.navigationItem.leftBarButtonItem = nil
+        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
