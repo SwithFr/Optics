@@ -23,6 +23,25 @@ class AccountViewController: UIViewController {
         formatInput(confirmField)
         formatRoundedImage(avatar, radius: 50, color: green, border: 3)
         formatBtn(updateBtn)
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let rc = RestCaller()
+        rc.get( "users/settings", authenticate: true ) {
+            error, data in
+            
+            if error != nil {
+                print("error")
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                let user = JSON( data: data )
+                self.loginField.text = user[ "data" ][ "login" ].string
+            })
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,27 +13,19 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func LogoutBtnDidTouch(sender: AnyObject) {
-        // Disconnect user
+        let user:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        user.removeObjectForKey( "USER_ID" )
+        user.removeObjectForKey( "USER_TOKEN" )
+        
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier( "loginScreen" )
+        self.navigationController?.pushViewController(loginVC!, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

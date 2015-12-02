@@ -11,6 +11,7 @@ import UIKit
 class FolderDetailTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var currentFolder: NSDictionary = [String: String]()
+    var currentEvent:JSON!
     var pictures = [
         [ "author": "Swith", "time": "10 min", "comments": 18, "picture": "Ben.jpg" ],
         [ "author": "Void", "time": "24 min", "comments": 81, "picture": "Marion.jpg" ],
@@ -22,16 +23,18 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = currentFolder["name"] as? String
-        self.navigationController?.setNavigationBarHidden(false, animated:true)
-        let backImg = UIImage(named: "back-icon")
-        let backBtn = UIButton(type: .Custom)
-        backBtn.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
-        backBtn.setImage(backImg, forState: .Normal)
+        self.navigationItem.title = currentEvent[ "title" ].string
+        self.navigationController?.setNavigationBarHidden( false, animated:true )
+        
+        let backImg = UIImage( named: "back-icon" )
+        let backBtn = UIButton( type: .Custom )
+        backBtn.addTarget( self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside )
+        backBtn.setImage( backImg, forState: .Normal )
         backBtn.sizeToFit()
-        let backBtnItem = UIBarButtonItem(customView: backBtn)
-        self.navigationItem.setLeftBarButtonItems([backBtnItem, menuBtn], animated: true)
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        let backBtnItem = UIBarButtonItem( customView: backBtn )
+        
+        self.navigationItem.setLeftBarButtonItems( [ backBtnItem, menuBtn ], animated: true )
+        self.navigationItem.backBarButtonItem = UIBarButtonItem( title:"", style:.Plain, target:nil, action:nil )
     }
     
     func popToRoot(sender: UIBarButtonItem) {
@@ -46,7 +49,7 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
         let cell = tableView.dequeueReusableCellWithIdentifier("picture", forIndexPath: indexPath) as! FolderDetailTableViewCell
         let picture = pictures[indexPath.row]
         
-        tableView.separatorColor = UIColor(red:0.75, green:0.89, blue:0.86, alpha:1.0)
+        tableView.separatorColor = green
         
         cell.author.text = picture["author"] as? String
         cell.time.text = picture["time"] as? String
@@ -57,29 +60,33 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
     }
     
     @IBAction func addPictureBtnDidTouch(sender: AnyObject) {
-        var imageFromSource = UIImagePickerController()
+        let imageFromSource = UIImagePickerController()
         imageFromSource.delegate = self
         imageFromSource.allowsEditing = false
         
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable( UIImagePickerControllerSourceType.Camera ) {
             imageFromSource.sourceType = UIImagePickerControllerSourceType.Camera
         } else {
             imageFromSource.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         }
         
-        self.presentViewController(imageFromSource, animated: true, completion: nil)
+        self.presentViewController( imageFromSource, animated: true, completion: nil )
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "pictureDetailSegue" {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let detailViewController = segue.destinationViewController as! PictureDetailViewController
-            detailViewController.currentPicture = pictures[indexPath.row]
+            detailViewController.currentPicture = pictures[ indexPath.row ]
+        } else if segue.identifier == "eventMenuSegue" {
+            let eventMenuViewController = segue.destinationViewController as! EventMenuViewController
+            eventMenuViewController.currentEvent = self.currentEvent
         }
     }
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        print("cool")
+        print( info )
     }
 
 

@@ -11,12 +11,9 @@ import UIKit
 class MainViewController: UINavigationController {
 
     override func viewDidAppear(animated: Bool) {
-        let user = "logged"
-            
-        if user == "" {
-            print("notLogged")
-            let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginScreen")
-            pushViewController(loginVC!, animated: true)
+        
+        if !User.isAuthenticated() {
+            Navigator.goTo( "loginScreen", vc: self )
         }
     }
 
