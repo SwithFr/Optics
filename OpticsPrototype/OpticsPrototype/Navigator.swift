@@ -22,4 +22,9 @@ class Navigator {
         vc.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    static func goBack(vc: UIViewController)
+    {
+        vc.navigationController!.popViewControllerAnimated(true)
+    }
+    
 }
