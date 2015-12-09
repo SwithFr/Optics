@@ -31,7 +31,7 @@ class EventMenuViewController: UIViewController {
             self.descriptionArea.text = currentEvent[ "description" ].string
         }
         
-        if !User.isEventOwner( currentEvent[ "user_id" ] ) {
+        if !User.isOwner( currentEvent[ "user_id" ] ) {
             deleteBtn.hidden = true
         } else {
             formatBtn( deleteBtn )

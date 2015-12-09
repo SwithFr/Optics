@@ -10,8 +10,9 @@ import Foundation
 
 class User  {
     
-    // Check if current user is the owner of an event
-    static func isEventOwner(ownerID: JSON) -> Bool {
+    // Check if current user is the owner of a ressource
+    static func isOwner(ownerID: JSON) -> Bool
+    {
         return ownerID.rawString()! == getUserProperty( "USER_ID" )!.stringValue
     }
     
