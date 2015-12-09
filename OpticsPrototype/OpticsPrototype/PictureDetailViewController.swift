@@ -18,6 +18,7 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var commentsCount: UILabel!
     @IBOutlet weak var authorPictureAvatar: UIImageView!
+    @IBOutlet weak var deleteBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,16 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
         
         picture.image = decodedimage! as UIImage
         author.text = currentPicture["author"].string
-        time.text = convertDateFormater( currentPicture["date"].string! )
+        time.text = Date.ago(currentPicture["date"].string!)
         commentsCount.text = String(currentPicture["comments"].int!)
         formatRoundedImage(authorPictureAvatar, radius: 20, color: BorderColor, border: 1.5)
-        authorPictureAvatar.image = UIImage(named: "moi.png")
+        //authorPictureAvatar.image = UIImage(named: "moi.png")
+        authorPictureAvatar.image = getImageFromUrl(currentPicture["avatar"].string!)
         
-        self.navigationItem.title = currentPicture["title"].string
+        if !User.isOwner(currentPicture[ "user_id" ]) {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+        //self.navigationItem.title = currentPicture["title"].string
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +49,20 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
         ["author": "Delphine", "comment": "Un super commentaire", "authorAvatar": "fake.png"],
         ["author": "Adrien", "comment": "Grillades !", "authorAvatar": "fake.png"]
     ]
+    
+    @IBAction func deleteBtnDidTouch(sender: AnyObject) {
+        let popView = UIAlertController( title: "Supprimer cette photo", message: "Voulez vous vraiment supprimer cette photo ?", preferredStyle: .Alert )
+        
+        let defaultAction = UIAlertAction( title: "Supprimer", style: .Destructive) {
+            ( alert: UIAlertAction! ) in
+            Picture.delete( String(self.currentPicture[ "id" ]) ) {
+                Navigator.goBack( self )
+            }
+        }
+        
+        popView.addAction(defaultAction)
+        self.presentViewController( popView, animated: true, completion: nil )
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
