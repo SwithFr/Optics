@@ -65,17 +65,17 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("picture", forIndexPath: indexPath) as! FolderDetailTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier( "picture", forIndexPath: indexPath ) as! FolderDetailTableViewCell
         let image = images[ indexPath.row ]
-        let decodedData = NSData(base64EncodedString: String(image["image"]), options: NSDataBase64DecodingOptions(rawValue: 0))
-        let decodedimage = UIImage(data: decodedData!)
+        let decodedData = NSData( base64EncodedString: String( image[ "image" ] ), options: NSDataBase64DecodingOptions( rawValue: 0 ) )
+        let decodedimage = UIImage( data: decodedData! )
         cell.picture.image = decodedimage! as UIImage
         
         tableView.separatorColor = green
         
-        cell.author.text = image["author"].string
-        cell.time.text = convertDateFormater( image["date"].string! )
-        cell.commentsCount.text = String(image["comments"].int!)
+        cell.author.text = image[ "author" ].string
+        cell.time.text = Date.ago( image[ "date" ].string! )
+        cell.commentsCount.text = String( image[ "comments" ].int! )
 
         return cell
     }
