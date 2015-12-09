@@ -57,3 +57,10 @@ func convertDateFormater(date: String) -> String
     
     return timeStamp
 }
+
+func getImageFromUrl(url: String) -> UIImage
+{
+    let url = NSURL(string: url)
+    let data = NSData(contentsOfURL: url!)
+    return UIImage(data: data!)!
+}
