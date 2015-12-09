@@ -20,6 +20,7 @@
 		09871E6A1C0EE52300922766 /* EventMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871E691C0EE52300922766 /* EventMenuViewController.swift */; };
 		09871E6C1C0EFC1300922766 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871E6B1C0EFC1300922766 /* User.swift */; };
 		09871E6F1C0F28AE00922766 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871E6E1C0F28AE00922766 /* Navigator.swift */; };
+		09871E721C0F39C400922766 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09871E711C0F39C400922766 /* Picture.swift */; };
 		098C487D1BF22E90009C41D8 /* tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C487C1BF22E90009C41D8 /* tools.swift */; };
 		098C487F1BF23357009C41D8 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098C487E1BF23357009C41D8 /* AddCommentViewController.swift */; };
 		098EEB011BECBAA6004C26F7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EEB001BECBAA6004C26F7 /* MenuViewController.swift */; };
@@ -79,6 +80,7 @@
 		09871E691C0EE52300922766 /* EventMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMenuViewController.swift; sourceTree = "<group>"; };
 		09871E6B1C0EFC1300922766 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		09871E6E1C0F28AE00922766 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		09871E711C0F39C400922766 /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		098C487C1BF22E90009C41D8 /* tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tools.swift; sourceTree = "<group>"; };
 		098C487E1BF23357009C41D8 /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
 		098EEB001BECBAA6004C26F7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				09BEE7FA1C04AD0400830AB6 /* main.storyboard */,
 				092239021BEA49D100C87ADF /* LaunchScreen.storyboard */,
 				092239051BEA49D100C87ADF /* Info.plist */,
+				09871E701C0F39AF00922766 /* Pictures */,
 				099873311BEB834400A6F8BD /* img */,
 				092238FD1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld */,
 			);
@@ -193,6 +196,14 @@
 				09871E691C0EE52300922766 /* EventMenuViewController.swift */,
 			);
 			name = Menus;
+			sourceTree = "<group>";
+		};
+		09871E701C0F39AF00922766 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				09871E711C0F39C400922766 /* Picture.swift */,
+			);
+			name = Pictures;
 			sourceTree = "<group>";
 		};
 		098EEB081BECE038004C26F7 /* Friends */ = {
@@ -411,6 +422,7 @@
 				092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */,
 				09871E6A1C0EE52300922766 /* EventMenuViewController.swift in Sources */,
 				09871E6F1C0F28AE00922766 /* Navigator.swift in Sources */,
+				09871E721C0F39C400922766 /* Picture.swift in Sources */,
 				09F35B261C0CC3EA009276D7 /* Validator.swift in Sources */,
 				098EEB031BECBB40004C26F7 /* AccountViewController.swift in Sources */,
 				099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */,

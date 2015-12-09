@@ -464,7 +464,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Hyu-9q-7QL">
-                        <barButtonItem key="leftBarButtonItem" image="menu-icon" id="qSO-PE-bdG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="qSO-PE-bdG">
                             <connections>
                                 <segue destination="Vkd-ru-Mb0" kind="push" identifier="eventMenuSegue" id="Ebf-N9-fB6"/>
                             </connections>

@@ -10,7 +10,7 @@ import UIKit
 
 class PictureDetailViewController: UIViewController, UITableViewDataSource {
     
-    var currentPicture: NSDictionary = [String: String]()
+    var currentPicture: JSON!
     let BorderColor = UIColor(red:0.10, green:0.12, blue:0.16, alpha:1.0)
     
     @IBOutlet weak var picture: UIImageView!
@@ -22,15 +22,17 @@ class PictureDetailViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let decodedData = NSData(base64EncodedString: String(currentPicture["image"]), options: NSDataBase64DecodingOptions(rawValue: 0))
+        let decodedimage = UIImage(data: decodedData!)
         
-        picture.image = UIImage(named: currentPicture["picture"] as! String)
-        author.text = currentPicture["author"] as? String
-        time.text = currentPicture["time"] as? String
-        commentsCount.text = String(currentPicture["comments"]!)
+        picture.image = decodedimage! as UIImage
+        author.text = currentPicture["author"].string
+        time.text = convertDateFormater( currentPicture["date"].string! )
+        commentsCount.text = String(currentPicture["comments"].int!)
         formatRoundedImage(authorPictureAvatar, radius: 20, color: BorderColor, border: 1.5)
         authorPictureAvatar.image = UIImage(named: "moi.png")
         
-        self.navigationItem.title = currentPicture["picture"] as? String
+        self.navigationItem.title = currentPicture["title"].string
     }
 
     override func didReceiveMemoryWarning() {
