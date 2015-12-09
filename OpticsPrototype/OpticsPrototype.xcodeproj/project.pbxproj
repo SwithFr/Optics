@@ -37,6 +37,7 @@
 		0998733F1BEB928000A6F8BD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */; };
 		0998734D1BEBB01400A6F8BD /* moi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734C1BEBB01400A6F8BD /* moi.png */; };
 		0998734F1BEBB5AD00A6F8BD /* fake.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734E1BEBB5AD00A6F8BD /* fake.png */; };
+		09B045101C1842AA009D26DE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0450F1C1842AA009D26DE /* Date.swift */; };
 		09BEE7F81C049AA400830AB6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BEE7F71C049AA400830AB6 /* SwiftyJSON.swift */; };
 		09BEE7FB1C04AD0400830AB6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BEE7FA1C04AD0400830AB6 /* main.storyboard */; };
 		09F35B241C0CBF45009276D7 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F35B231C0CBF45009276D7 /* AddEventViewController.swift */; };
@@ -97,6 +98,7 @@
 		0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		0998734C1BEBB01400A6F8BD /* moi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moi.png; sourceTree = "<group>"; };
 		0998734E1BEBB5AD00A6F8BD /* fake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake.png; sourceTree = "<group>"; };
+		09B0450F1C1842AA009D26DE /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		09BEE7F71C049AA400830AB6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		09BEE7FA1C04AD0400830AB6 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		09F35B231C0CBF45009276D7 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -164,9 +166,8 @@
 				09BEE7FA1C04AD0400830AB6 /* main.storyboard */,
 				092239021BEA49D100C87ADF /* LaunchScreen.storyboard */,
 				092239051BEA49D100C87ADF /* Info.plist */,
-				09871E701C0F39AF00922766 /* Pictures */,
-				099873311BEB834400A6F8BD /* img */,
 				092238FD1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld */,
+				099873311BEB834400A6F8BD /* img */,
 			);
 			path = OpticsPrototype;
 			sourceTree = "<group>";
@@ -196,14 +197,6 @@
 				09871E691C0EE52300922766 /* EventMenuViewController.swift */,
 			);
 			name = Menus;
-			sourceTree = "<group>";
-		};
-		09871E701C0F39AF00922766 /* Pictures */ = {
-			isa = PBXGroup;
-			children = (
-				09871E711C0F39C400922766 /* Picture.swift */,
-			);
-			name = Pictures;
 			sourceTree = "<group>";
 		};
 		098EEB081BECE038004C26F7 /* Friends */ = {
@@ -262,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				0998733A1BEB8EE400A6F8BD /* PictureDetailViewController.swift */,
+				09871E711C0F39C400922766 /* Picture.swift */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -274,6 +268,7 @@
 				095FF6391C05AD850015A6B1 /* RestCaller.swift */,
 				09F35B251C0CC3EA009276D7 /* Validator.swift */,
 				09871E6E1C0F28AE00922766 /* Navigator.swift */,
+				09B0450F1C1842AA009D26DE /* Date.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -427,6 +422,7 @@
 				098EEB031BECBB40004C26F7 /* AccountViewController.swift in Sources */,
 				099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */,
 				092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */,
+				09B045101C1842AA009D26DE /* Date.swift in Sources */,
 				092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */,
 				0922392A1BEA5A9100C87ADF /* FolderTableViewCell.swift in Sources */,
 				0998733B1BEB8EE400A6F8BD /* PictureDetailViewController.swift in Sources */,

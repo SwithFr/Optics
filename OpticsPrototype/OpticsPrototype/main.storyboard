@@ -91,7 +91,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MQ-ux-llR">
                                 <rect key="frame" x="99" y="402" width="122" height="42"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.74509803919999995" green="0.89019607840000003" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.69803921568627447" green="0.8666666666666667" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <state key="normal" title="Me connecter">
@@ -464,7 +464,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Hyu-9q-7QL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="qSO-PE-bdG">
+                        <barButtonItem key="leftBarButtonItem" image="settings-icon" id="qSO-PE-bdG">
                             <connections>
                                 <segue destination="Vkd-ru-Mb0" kind="push" identifier="eventMenuSegue" id="Ebf-N9-fB6"/>
                             </connections>
@@ -640,11 +640,18 @@
                             <constraint firstItem="g7n-gw-ogt" firstAttribute="centerX" secondItem="weh-E4-tPe" secondAttribute="centerX" id="wQu-I4-Sey"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DMX-2S-zpZ"/>
+                    <navigationItem key="navigationItem" id="DMX-2S-zpZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="U49-xQ-S32">
+                            <connections>
+                                <action selector="deleteBtnDidTouch:" destination="7qa-1G-1J3" id="MqA-rZ-8tL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="author" destination="YOa-bG-x5u" id="QCX-bC-Ezi"/>
                         <outlet property="authorPictureAvatar" destination="hyk-Q7-gcp" id="7fZ-xM-gQU"/>
                         <outlet property="commentsCount" destination="HIK-x0-FZE" id="IEb-xw-1Rk"/>
+                        <outlet property="deleteBtn" destination="U49-xQ-S32" id="nee-y5-fzP"/>
                         <outlet property="picture" destination="DAC-N7-6BM" id="3BC-65-avW"/>
                         <outlet property="time" destination="8zy-KB-d5A" id="0c6-tX-QHq"/>
                     </connections>
@@ -1073,5 +1080,6 @@
         <image name="participants" width="21" height="19"/>
         <image name="pic-icon" width="21" height="17"/>
         <image name="separator" width="374" height="1"/>
+        <image name="settings-icon" width="22" height="22"/>
     </resources>
 </document>
