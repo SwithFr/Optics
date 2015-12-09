@@ -11,9 +11,22 @@ import UIKit
 
 class Picture {
     
-    static func upload(image: UIImage)
+    static func delete(pictureId: String, next: () -> Void)
     {
-        
+        let rc = RestCaller()
+        rc.delete( "pictures/\(pictureId)", authenticate: true) {
+            error, data in
+            
+            if error != nil {
+                print("error on deletion")
+                return
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                next()
+            }
+        }
+
     }
     
 }
