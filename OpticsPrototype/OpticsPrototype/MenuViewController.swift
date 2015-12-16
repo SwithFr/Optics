@@ -10,16 +10,19 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         //self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func LogoutBtnDidTouch(sender: AnyObject) {
+    @IBAction func LogoutBtnDidTouch(sender: AnyObject)
+    {
         let user:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         user.removeObjectForKey( "USER_ID" )
         user.removeObjectForKey( "USER_TOKEN" )
