@@ -54,7 +54,6 @@ class LoginViewController: UIViewController {
                 }
                 
                 let data = JSON( data: results! )
-                print( data )
                 let user:NSUserDefaults = NSUserDefaults.standardUserDefaults()
                 user.setValue( data[ "data"][ "token" ].string, forKey: "USER_TOKEN")
                 user.setValue( data[ "data" ][ "id" ].int, forKey: "USER_ID" )
