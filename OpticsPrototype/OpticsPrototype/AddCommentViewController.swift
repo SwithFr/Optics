@@ -10,26 +10,52 @@ import UIKit
 
 class AddCommentViewController: UIViewController {
 
+    @IBOutlet weak var charactersLimitLabel: UILabel!
     @IBOutlet weak var commentField: UITextView!
+    var sPictureid: String!
+    var sEventId: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatTextArea(commentField)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem( title:"", style:.Plain, target:nil, action:nil )
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func addCommentBtnDidTouch(sender: AnyObject) {
+        
+        let comment = commentField.text
+        
+        if comment.isEmpty {
+            let alertView = UIAlertController(title: "Informations manquantes", message: "Veuillez saisir un commentaire", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            alertView.addAction(defaultAction)
+            presentViewController(alertView, animated: true, completion: nil)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        }
+        
+        if comment.characters.count > 80 {
+            
+            let alertView = UIAlertController(title: "Commentaire trop long", message: "Veuillez saisir un commentaire de maximum 80 caractères", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+            alertView.addAction(defaultAction)
+            
+            charactersLimitLabel.textColor = red
+            
+            presentViewController(alertView, animated: true, completion: nil)
+            
+        } else {
+            
+            Comment.add( commentField.text, pictureid: sPictureid, eventid: sEventId ) {
+                data in
+                    dispatch_async(dispatch_get_main_queue()) {
+                        Navigator.goBack( self )
+                    }
+            }
+            
+        }
     }
-    */
-
 }
