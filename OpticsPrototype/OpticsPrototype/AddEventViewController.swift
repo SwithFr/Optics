@@ -21,8 +21,6 @@ class AddEventViewController: UIViewController {
         formatInput( titleField )
         formatTextArea( descriptionField )
         formatBtn( createBtn )
-        
-        
     }
     
     @IBAction func createBtnDidTouch(sender: AnyObject) {
