@@ -38,6 +38,8 @@
 		0998734D1BEBB01400A6F8BD /* moi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734C1BEBB01400A6F8BD /* moi.png */; };
 		0998734F1BEBB5AD00A6F8BD /* fake.png in Resources */ = {isa = PBXBuildFile; fileRef = 0998734E1BEBB5AD00A6F8BD /* fake.png */; };
 		09B045101C1842AA009D26DE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0450F1C1842AA009D26DE /* Date.swift */; };
+		09BEC3F61C2021440044903C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BEC3F51C2021440044903C /* Event.swift */; };
+		09BEC3F81C20556A0044903C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BEC3F71C20556A0044903C /* Comment.swift */; };
 		09BEE7F81C049AA400830AB6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BEE7F71C049AA400830AB6 /* SwiftyJSON.swift */; };
 		09BEE7FB1C04AD0400830AB6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09BEE7FA1C04AD0400830AB6 /* main.storyboard */; };
 		09F35B241C0CBF45009276D7 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F35B231C0CBF45009276D7 /* AddEventViewController.swift */; };
@@ -99,6 +101,8 @@
 		0998734C1BEBB01400A6F8BD /* moi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moi.png; sourceTree = "<group>"; };
 		0998734E1BEBB5AD00A6F8BD /* fake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake.png; sourceTree = "<group>"; };
 		09B0450F1C1842AA009D26DE /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		09BEC3F51C2021440044903C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		09BEC3F71C20556A0044903C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		09BEE7F71C049AA400830AB6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		09BEE7FA1C04AD0400830AB6 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		09F35B231C0CBF45009276D7 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				0998732A1BEB7DF900A6F8BD /* FolderDetailTableViewCell.swift */,
 				092239291BEA5A9100C87ADF /* FolderTableViewCell.swift */,
 				09F35B231C0CBF45009276D7 /* AddEventViewController.swift */,
+				09BEC3F51C2021440044903C /* Event.swift */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			children = (
 				0998733E1BEB928000A6F8BD /* CommentTableViewCell.swift */,
 				098C487E1BF23357009C41D8 /* AddCommentViewController.swift */,
+				09BEC3F71C20556A0044903C /* Comment.swift */,
 			);
 			name = Comments;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				098C487F1BF23357009C41D8 /* AddCommentViewController.swift in Sources */,
 				09F35B241C0CBF45009276D7 /* AddEventViewController.swift in Sources */,
 				099873251BEB6D3700A6F8BD /* LoginViewController.swift in Sources */,
+				09BEC3F81C20556A0044903C /* Comment.swift in Sources */,
 				092239281BEA4F9B00C87ADF /* FoldersTableViewController.swift in Sources */,
 				09871E6A1C0EE52300922766 /* EventMenuViewController.swift in Sources */,
 				09871E6F1C0F28AE00922766 /* Navigator.swift in Sources */,
@@ -421,6 +428,7 @@
 				09F35B261C0CC3EA009276D7 /* Validator.swift in Sources */,
 				098EEB031BECBB40004C26F7 /* AccountViewController.swift in Sources */,
 				099873271BEB6D6700A6F8BD /* RegisterViewController.swift in Sources */,
+				09BEC3F61C2021440044903C /* Event.swift in Sources */,
 				092238FF1BEA49D100C87ADF /* OpticsPrototype.xcdatamodeld in Sources */,
 				09B045101C1842AA009D26DE /* Date.swift in Sources */,
 				092238F71BEA49D100C87ADF /* AppDelegate.swift in Sources */,
