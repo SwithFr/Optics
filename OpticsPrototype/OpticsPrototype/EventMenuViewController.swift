@@ -16,7 +16,8 @@ class EventMenuViewController: UIViewController {
     @IBOutlet weak var descriptionArea: UITextView!
     var currentEvent: JSON!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         formatTextArea( descriptionArea )
@@ -24,11 +25,11 @@ class EventMenuViewController: UIViewController {
         
         self.eventID.text = currentEvent[ "uuid" ].string
         
-        if !currentEvent[ "description" ] {
+        if currentEvent[ "description" ] != "" {
+            self.descriptionArea.text = String( currentEvent[ "description" ] )
+        } else {
             self.descriptionArea.hidden = true
             self.descriptionLabel.hidden = true
-        } else {
-            self.descriptionArea.text = currentEvent[ "description" ].string
         }
         
         if !User.isOwner( currentEvent[ "user_id" ] ) {
@@ -38,25 +39,35 @@ class EventMenuViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()    }
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
     
-    @IBAction func deleteBtnDidTouch(sender: AnyObject) {
-        let eventID = currentEvent[ "uuid" ].string!
-        let rc = RestCaller()
+    @IBAction func shareBtnDidTouch(sender: AnyObject)
+    {
+        let shareVC = UIActivityViewController( activityItems: [ eventID.text! ], applicationActivities: nil )
+        presentViewController( shareVC, animated: true, completion: nil )
+    }
+    
+    @IBAction func deleteBtnDidTouch(sender: AnyObject)
+    {
+        let popView = UIAlertController( title: "Supprimer cet évènement", message: "Voulez vous vraiment supprimer cet évènement ?", preferredStyle: .Alert )
         
-        rc.delete( "events/\(eventID)", authenticate: true) {
-            error, data in
-            
-            if error != nil {
-                print("error on deletion")
-                return
-            }
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                Navigator.goTo( "foldersListScreen" , vc: self)
+        let defaultAction = UIAlertAction( title: "Supprimer", style: .Destructive) {
+            ( alert: UIAlertAction! ) in
+            Event.delete( self.currentEvent[ "uuid" ].string! ) {
+                Void in
+                
+                dispatch_async( dispatch_get_main_queue() ) {
+                    Navigator.goTo( "foldersListScreen" , vc: self )
+                }
             }
         }
+        
+        popView.addAction(defaultAction)
+        self.presentViewController( popView, animated: true, completion: nil )
+        
     }
 
 }
