@@ -11,20 +11,27 @@ import CoreMedia
 
 class FolderDetailTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var currentFolder: NSDictionary = [String: String]()
     var currentEvent:JSON!
     var images:[JSON] = []
-    var pictures = [
-        [ "author": "Swith", "time": "10 min", "comments": 18, "picture": "Ben.jpg" ],
-        [ "author": "Void", "time": "24 min", "comments": 81, "picture": "Marion.jpg" ],
-        [ "author": "Camille Caramel", "time": "2h", "comments": 13, "picture": "Ben.jpg" ]
-    ]
 
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidLoad() {
+        let backImg = UIImage( named: "back-icon" )
+        let backBtn = UIButton( type: .Custom )
+        backBtn.addTarget( self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside )
+        backBtn.setImage( backImg, forState: .Normal )
+        backBtn.sizeToFit()
+        let backBtnItem = UIBarButtonItem( customView: backBtn )
+        
+        self.navigationItem.setLeftBarButtonItems( [ backBtnItem, menuBtn ], animated: true )
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.navigationItem.title = currentEvent[ "title" ].string
         self.navigationController?.setNavigationBarHidden( false, animated:true )
+        
+        showLoader( "Chargement" )
         
         let rc = RestCaller()
         rc.setParams( [ "eventid": String(currentEvent["id"].int!) ] )
@@ -35,22 +42,13 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
                     print("error")
                 }
                 
+                self.hideLoader()
                 self.setAndReloadData( data )
             }
         }
-        
-        let backImg = UIImage( named: "back-icon" )
-        let backBtn = UIButton( type: .Custom )
-        backBtn.addTarget( self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside )
-        backBtn.setImage( backImg, forState: .Normal )
-        backBtn.sizeToFit()
-        let backBtnItem = UIBarButtonItem( customView: backBtn )
-        
-        self.navigationItem.setLeftBarButtonItems( [ backBtnItem, menuBtn ], animated: true )
-        self.navigationItem.backBarButtonItem = UIBarButtonItem( title:"", style:.Plain, target:nil, action:nil )
     }
     
-    private func setAndReloadData(data: NSData) {
+    func setAndReloadData(data: NSData) {
         let pictures = JSON( data: data )
         self.images = pictures["data"].arrayValue
         self.tableView.reloadData()
@@ -96,7 +94,6 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if segue.identifier == "pictureDetailSegue" {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let detailViewController = segue.destinationViewController as! PictureDetailViewController
@@ -109,8 +106,9 @@ class FolderDetailTableViewController: UITableViewController, UINavigationContro
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let img = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
         let rc = RestCaller()
-        rc.uploadImage( String(currentEvent["id"].int!) ,image: img ) {
+        rc.uploadImage( String( currentEvent[ "id" ].int! ) ,image: img ) {
             error, data in
             if error != nil {
                 print( "Error on upload" )
