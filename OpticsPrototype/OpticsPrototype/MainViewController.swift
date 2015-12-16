@@ -50,9 +50,4 @@ extension UIViewController {
             viewWithTag.removeFromSuperview()
         }
     }
-//    
-//    func hideBackButonTitle()
-//    {
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-//    }
 }
