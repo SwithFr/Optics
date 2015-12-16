@@ -13,21 +13,13 @@ class FoldersTableViewController: UITableViewController {
     @IBOutlet var eventIdField: UITextField?
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
-    var folders = [
-        [ "name": "Mon anniv", "date": "17/03/2015", "participants": 18, "pictures": 33 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Soirée concert", "date": "23/12/2014", "participants": 81, "pictures": 93 ],
-        [ "name": "Nam party", "date": "07/07/2015", "participants": 13, "pictures": 8 ]
-    ]
-    
     var events:[JSON] = []
     
     override func viewWillAppear(animated: Bool) {
+        getEvents()
+    }
+    
+    private func getEvents() {
         let rc = RestCaller()
         rc.get( "events" , authenticate: true) {
             error, data in
@@ -53,14 +45,6 @@ class FoldersTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-    }
-    
-    func popToRoot(sender: UIBarButtonItem) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
@@ -75,7 +59,7 @@ class FoldersTableViewController: UITableViewController {
         cell.name.text = event["title"].string
         cell.date.text = date
         //cell.picturesCount.text = String(folder["pictures"]!)
-        //cell.participantsCount.text = String(folder["participants"]!)
+        cell.participantsCount.text = String( event["users_count"] )
         
         return cell
     }
@@ -107,7 +91,6 @@ class FoldersTableViewController: UITableViewController {
             let indexPath = self.tableView.indexPathForSelectedRow!
             let detailViewController = segue.destinationViewController as! FolderDetailTableViewController
             
-            detailViewController.currentFolder = folders[ indexPath.row ]
             detailViewController.currentEvent = events[ indexPath.row ]
         }
     }
